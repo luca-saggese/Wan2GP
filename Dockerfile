@@ -8,6 +8,7 @@ FROM nvidia/cuda:12.8.1-cudnn-devel-ubuntu22.04
 #   8.6  - RTX 3060, 3070, 3080, 3090 (Ampere consumer)
 #   8.9  - RTX 4070, 4080, 4090 (Ada Lovelace)
 #   9.0  - H100, H800 (Hopper data center)
+#   10.0 - B100, B200, GB10/GB200 (Blackwell data center / DGX Spark)
 #   12.0 - RTX 5070, 5080, 5090 (Blackwell) - Note: sm_120 architecture
 #
 # Examples:
@@ -17,7 +18,7 @@ FROM nvidia/cuda:12.8.1-cudnn-devel-ubuntu22.04
 #
 # Note: Including 8.9 or 9.0 may cause compilation issues on some setups
 # Default includes 8.0 and 8.6 for broad Ampere compatibility
-ARG CUDA_ARCHITECTURES="8.0;8.6"
+ARG CUDA_ARCHITECTURES="10.0"
 
 ENV DEBIAN_FRONTEND=noninteractive
 
