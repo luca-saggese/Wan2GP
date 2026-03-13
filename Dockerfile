@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.8.1-cudnn-devel-ubuntu22.04
+FROM nvcr.io/nvidia/pytorch:24.12-py3
 
 # Build arg for GPU architectures - specify which CUDA compute capabilities to compile for
 # Common values:
